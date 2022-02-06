@@ -4,6 +4,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule } from '@angular/router';
@@ -11,6 +12,7 @@ import { AppComponent } from './app.component';
 import { APP_ROUTES } from './app.routes';
 import { HomeComponent } from './home/home.component';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { PluginProxyComponent } from './plugins/plugin-proxy/plugin-proxy.component';
 
 @NgModule({
   imports: [
@@ -22,8 +24,9 @@ import { NotFoundComponent } from './not-found/not-found.component';
     MatListModule,
     MatButtonModule,
     MatIconModule,
+    MatProgressSpinnerModule
   ],
-  declarations: [AppComponent, HomeComponent, NotFoundComponent],
+  declarations: [AppComponent, HomeComponent, NotFoundComponent, PluginProxyComponent],
   providers: [],
   bootstrap: [AppComponent],
 })

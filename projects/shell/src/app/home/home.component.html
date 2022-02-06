@@ -1,1 +1,4 @@
 <h1>Wallet Balance: {{balance | currency}}</h1>
+
+<app-plugin-proxy *ngFor="let option of pluginOptions$ | async" [options]="option"></app-plugin-proxy>
+<mat-spinner *ngIf="pending$ | async"></mat-spinner>

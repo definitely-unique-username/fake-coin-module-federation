@@ -38,6 +38,7 @@ module.exports = {
           "@angular/material/list": { singleton: true, strictVersion: true, requiredVersion: 'auto' },
           "@angular/material/sidenav": { singleton: true, strictVersion: true, requiredVersion: 'auto' },
           "@angular/material/toolbar": { singleton: true, strictVersion: true, requiredVersion: 'auto' },
+          "@angular/material/progress-spinner": { singleton: true, strictVersion: true, requiredVersion: 'auto' },
           ...sharedMappings.getDescriptors()
         })
         

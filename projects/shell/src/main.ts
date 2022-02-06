@@ -4,7 +4,11 @@ Promise.all([
 	loadRemoteEntry({
 		remoteEntry: 'http://localhost:3000/remoteEntry.js', 
 		type: 'module'
-	})
+	}),
+	// loadRemoteEntry({
+	// 	remoteEntry: 'http://localhost:3001/remoteEntry.js', 
+	// 	type: 'module'
+	// })
 ])
 	.catch((error) => console.error(error))
 	.then(() => import('./bootstrap'))
