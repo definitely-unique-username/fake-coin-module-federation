@@ -1,3 +1,4 @@
+import { loadRemoteModule, } from '@angular-architects/module-federation';
 import { Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { NotFoundComponent } from './not-found/not-found.component';
@@ -10,7 +11,11 @@ export const APP_ROUTES: Routes = [
   },
   {
     path: 'cryptos',
-    loadChildren: () => import('mfe1/cryptos').then(m => m.CryptosModule)
+    loadChildren: () => loadRemoteModule({
+      remoteEntry: 'http://localhost:3000/remoteEntry.js',
+      type: 'module', 
+      exposedModule: './cryptos'
+    }).then((m) => m.CryptosModule)
   },
   {
     path: '**',
